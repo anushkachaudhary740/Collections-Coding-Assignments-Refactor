@@ -17,11 +17,12 @@ public class StudentParser {
     }
 
     public List<Student> parseCSvFile(String filePath) {
-        List<Student> list = new ArrayList<Student>();
-        try  {
 
-            File file = new File(filePath);
-            BufferedReader br = new BufferedReader(new FileReader(file));
+        List<Student> list = new ArrayList<Student>();
+        File file = new File(filePath);
+        BufferedReader br=null;
+        try  {
+            br=new BufferedReader(new FileReader(file));
             String stf;
 
             while ((stf = br.readLine()) != null) {
@@ -35,13 +36,13 @@ public class StudentParser {
             throw new RuntimeException(ioe);
         } catch (Exception exe) {
             throw new RuntimeException(exe);
-       } //finally {
-//           try {
-//               br.close();
-//           } catch (IOException e) {
-//              throw new RuntimeException(e);
-//           }
-//       }
+       } finally {
+           try {
+               br.close();
+           } catch (IOException e) {
+              throw new RuntimeException(e);
+           }
+       }
         return list;
     }
 }
