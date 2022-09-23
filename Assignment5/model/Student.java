@@ -6,7 +6,12 @@ public class Student {
     private String department;
     private Integer Salary;
 
-
+    public Student(Integer studentId, String studentName ,String department, Integer Salary) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.department = department;
+        this.Salary=Salary;
+    }
 
     public Integer getStudentId() {
         return studentId;
@@ -38,5 +43,10 @@ public class Student {
 
     public void setSalary(Integer salary) {
         Salary = salary;
+    }
+    @Override
+    public String toString() {
+        return java.text.MessageFormat.format("Id: {0}\t Name: {1}\t department: {2}\t Salary: {3}\n", studentId,studentName,
+                department,Salary);
     }
 }

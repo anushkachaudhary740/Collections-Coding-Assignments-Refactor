@@ -9,12 +9,7 @@ public class Datamap {
             String department = splitArray[2];
             Integer Salary = Integer.parseInt(splitArray[3]);
 
-            Student sal = new Student();
-            sal.setStudentId(studentId);
-            sal.setStudentName(studentName);
-            sal.setDepartment(department);
-            sal.setSalary(Salary);
-
+            Student sal = new Student(studentId,studentName,department,Salary);
             return sal;
         }catch (NumberFormatException nm)
         {
