@@ -8,7 +8,7 @@ public class mapSoftware {
         String[] splitArray = data.split(",");
         try {
            ;
-            double version = Double.parseDouble(splitArray[3]);
+            String version = splitArray[3];
             String server = splitArray[0];
             String dataBase = splitArray[1];
             String operatingSystem = splitArray[2];

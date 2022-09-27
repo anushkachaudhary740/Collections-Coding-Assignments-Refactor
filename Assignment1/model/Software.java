@@ -4,9 +4,9 @@ public class Software {
     private String server;
     private String dataBase;
     private String operatingSystem;
-    private Double version;
+    private String version;
 
-    public Software(String server, String dataBase, String operatingSystem, Double version) {
+    public Software(String server, String dataBase, String operatingSystem, String version) {
         this.server = server;
         this.dataBase = dataBase;
         this.operatingSystem = operatingSystem;
@@ -37,11 +37,11 @@ public class Software {
         this.operatingSystem = operatingSystem;
     }
 
-    public Double getVersion() {
+    public String getVersion() {
         return version;
     }
 
-    public void setVersion(Double version) {
+    public void setVersion(String version) {
         this.version = version;
     }
     @Override
